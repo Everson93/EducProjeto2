@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "462989894371",
+    "firebase_url": "https://eductcc.firebaseio.com",
+    "project_id": "eductcc",
+    "storage_bucket": "eductcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462989894371:android:8f1d9103ff449698",
+        "android_client_info": {
+          "package_name": "com.tcc.everson.educprojeto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462989894371-e8jcsg3mqeijbkov51gfg3f9d0fr0ca5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tcc.everson.educprojeto",
+            "certificate_hash": "30cad19956fb2d70c4727ddedfa4feed47a64db2"
+          }
+        },
+        {
+          "client_id": "462989894371-v2r11nm8tpcsj0iegf30l9ffkj2fbnmg.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "462989894371-v2r11nm8tpcsj0iegf30l9ffkj2fbnmg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwoxaXMbo6gR1DTEgL7Ajn647_7qJYrxU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462989894371-v2r11nm8tpcsj0iegf30l9ffkj2fbnmg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

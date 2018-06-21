@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".activitys.JogosActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logoemdesenvolvimento" />
+
+    <Button
+        android:id="@+id/forca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="50dp"
+        android:onClick="jogoForca"
+        android:text="@string/jogo_da_forca"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="84dp" />
+
+    <Button
+        android:id="@+id/caca_letras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_gravity="center"
+        android:onClick="jogoCaca"
+        android:text="@string/ca_a_letras"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="84dp" />
+    <Button
+        android:id="@+id/sair"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="fechar"
+        android:text="@string/fechar"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="84dp" />
+
+</LinearLayout>

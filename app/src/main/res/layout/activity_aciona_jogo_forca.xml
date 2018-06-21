@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".activitys.JogoForcaActivity"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/forca_5"
+        android:layout_weight="1.03" />
+
+    <Button
+        android:id="@+id/bStart1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/come_ar" />
+
+
+    <Button
+        android:id="@+id/bSair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        />
+</LinearLayout>
