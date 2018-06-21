@@ -1,6 +1,7 @@
 package com.tcc.everson.educprojeto.activitys;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.tcc.everson.educprojeto.entidades.Palavras;
@@ -25,10 +27,11 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
     String splitTema;
     Palavras palavras;
     String teste;
+    Context context = this;
 
     TextView tvPalavra;
     TextView tvDica;
-    ImageView forca;
+    ImageView forca,imgAudio;
     Button bA, bB, bC, bD, bE, bF, bG, bH, bI, bJ, bK, bL, bM,
             bN, bO, bP, bQ, bR, bS, bT, bU, bV, bW, bX, bY, bZ;
 
@@ -36,6 +39,8 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jogo_forca);
+
+        imgAudio = findViewById(R.id.imgAudio);
 
        iniciarObjetos();
        iniciarJogo();
@@ -293,12 +298,180 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
         splitTema = palavra[1];                   //segunda palavra do split na segunda posicao do array
         palavraSecreta = splitPalavra;
         tvDica.setText(splitTema);
-        String teste = splitPalavra.substring(0,1);
+        final String teste = splitPalavra.substring(0,1);
         int tamanho = splitPalavra.length();
-        String teste2 = splitPalavra.substring(tamanho-1, tamanho);
+        final String teste2 = splitPalavra.substring(tamanho-1, tamanho);
 
-       MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.letraa);
-       mediaPlayer.start();
+
+
+        imgAudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (teste.equalsIgnoreCase("A")){
+                    new MediaPlayer().create(context,R.raw.letraa).start();
+                }
+                if (teste.equalsIgnoreCase("B")){
+                    new MediaPlayer().create(context,R.raw.letrab).start();
+                }
+                if (teste.equalsIgnoreCase("C")){
+                    new MediaPlayer().create(context,R.raw.letrac).start();
+                }
+                if (teste.equalsIgnoreCase("D")){
+                    new MediaPlayer().create(context,R.raw.letrad).start();
+                }
+                if (teste.equalsIgnoreCase("E")){
+                    new MediaPlayer().create(context,R.raw.letrae).start();
+                }
+                if (teste.equalsIgnoreCase("F")){
+                    new MediaPlayer().create(context,R.raw.letraf).start();
+                }
+                if (teste.equalsIgnoreCase("G")){
+                    new MediaPlayer().create(context,R.raw.letrag).start();
+                }
+                if (teste.equalsIgnoreCase("H")){
+                    new MediaPlayer().create(context,R.raw.letrah).start();
+                }
+                if (teste.equalsIgnoreCase("I")){
+                    new MediaPlayer().create(context,R.raw.letrai).start();
+                }
+                if (teste.equalsIgnoreCase("J")){
+                    new MediaPlayer().create(context,R.raw.letraj).start();
+                }
+                if (teste.equalsIgnoreCase("K")){
+                    new MediaPlayer().create(context,R.raw.letrak).start();
+                }
+                if (teste.equalsIgnoreCase("L")){
+                    new MediaPlayer().create(context,R.raw.letral).start();
+                }
+                if (teste.equalsIgnoreCase("M")){
+                    new MediaPlayer().create(context,R.raw.letram).start();
+                }
+                if (teste.equalsIgnoreCase("N")){
+                    new MediaPlayer().create(context,R.raw.letran).start();
+                }
+                if (teste.equalsIgnoreCase("O")){
+                    new MediaPlayer().create(context,R.raw.letrao).start();
+                }
+                if (teste.equalsIgnoreCase("P")){
+                    new MediaPlayer().create(context,R.raw.letrap).start();
+                }
+                if (teste.equalsIgnoreCase("Q")){
+                    new MediaPlayer().create(context,R.raw.letraq).start();
+                }
+                if (teste.equalsIgnoreCase("R")){
+                    new MediaPlayer().create(context,R.raw.letrar).start();
+                }
+                if (teste.equalsIgnoreCase("S")){
+                    new MediaPlayer().create(context,R.raw.letras).start();
+                }
+                if (teste.equalsIgnoreCase("T")){
+                    new MediaPlayer().create(context,R.raw.letrat).start();
+                }
+                if (teste.equalsIgnoreCase("U")){
+                    new MediaPlayer().create(context,R.raw.letrau).start();
+                }
+                if (teste.equalsIgnoreCase("V")){
+                    new MediaPlayer().create(context,R.raw.letrav).start();
+                }
+                if (teste.equalsIgnoreCase("X")){
+                    new MediaPlayer().create(context,R.raw.letrax).start();
+                }
+                if (teste.equalsIgnoreCase("Y")){
+                    new MediaPlayer().create(context,R.raw.letray).start();
+                }
+                if (teste.equalsIgnoreCase("W")){
+                    new MediaPlayer().create(context,R.raw.letraw).start();
+                }
+                if (teste.equalsIgnoreCase("Z")){
+                    new MediaPlayer().create(context,R.raw.letraz).start();
+                }
+                imgAudio.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (teste2.equalsIgnoreCase("A")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("B")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("C")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("D")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("E")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("F")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("G")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("H")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("I")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("J")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("K")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("L")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("M")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("N")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("O")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("P")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("Q")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("R")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("S")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("T")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("U")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("V")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("X")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("Y")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("W")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+                        if (teste2.equalsIgnoreCase("Z")){
+                            new MediaPlayer().create(context,R.raw.letraa).start();
+                        }
+
+                    }
+                });
+
+        }
+        });
 
 
         procedimentosInicio();

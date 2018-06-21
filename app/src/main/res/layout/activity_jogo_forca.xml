@@ -182,7 +182,7 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgAudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -196,7 +196,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/imageView3"
+        android:layout_alignTop="@+id/imgAudio"
         android:layout_marginEnd="59dp"
         android:textColor="@color/repetir"
         android:textStyle="bold"
