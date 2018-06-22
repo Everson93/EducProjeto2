@@ -19,75 +19,88 @@
         <Button
             android:id="@+id/bA"
             style="@style/letras"
-            android:text="@string/a" />
+            android:text="@string/a"
+            android:onClick="click1" />
 
         <Button
             android:id="@+id/bB"
             style="@style/letras"
-            android:text="@string/b" />
+            android:text="@string/b"
+            android:onClick="click2"/>
 
         <Button
             android:id="@+id/bC"
             style="@style/letras"
-            android:text="@string/c" />
+            android:text="@string/c"
+            android:onClick="click3"/>
 
         <Button
             android:id="@+id/bD"
             style="@style/letras"
-            android:text="@string/d" />
+            android:text="@string/d"
+            android:onClick="click4"/>
 
         <Button
             android:id="@+id/bE"
             style="@style/letras"
-            android:text="@string/e" />
+            android:text="@string/e"
+            android:onClick="click5"/>
 
         <Button
             android:id="@+id/bF"
             style="@style/letras"
-            android:text="@string/f" />
+            android:text="@string/f"
+            android:onClick="click6"/>
 
         <Button
             android:id="@+id/bG"
             style="@style/letras"
-            android:text="@string/g" />
+            android:text="@string/g"
+            android:onClick="click7"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="-96dp"
+        android:layout_marginTop="-105dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/d7"
             style="@style/letras"
-            android:text="@string/a" />
+            android:text="@string/a"
+            />
 
         <Button
             android:id="@+id/d6"
             style="@style/letras"
-            android:text="@string/b" />
+            android:text="@string/b"
+            />
 
         <Button
             android:id="@+id/d5"
             style="@style/letras"
-            android:text="@string/c" />
+            android:text="@string/c"
+            />
 
         <Button
             android:id="@+id/d4"
             style="@style/letras"
-            android:text="@string/d" />
+            android:text="@string/d"
+            />
 
         <Button
             android:id="@+id/d3"
             style="@style/letras"
-            android:text="@string/e" />
+            android:text="@string/e"
+            />
 
         <Button
             android:id="@+id/d2"
             style="@style/letras"
-            android:text="@string/f" />
+            android:text="@string/f"
+            />
 
         <Button
             android:id="@+id/d1"
@@ -106,37 +119,44 @@
         <Button
             android:id="@+id/b7"
             style="@style/letras"
-            android:text="@string/a" />
+            android:text="@string/a"
+            android:onClick="click8"/>
 
         <Button
             android:id="@+id/b6"
             style="@style/letras"
-            android:text="@string/b" />
+            android:text="@string/b"
+            android:onClick="click9"/>
 
         <Button
             android:id="@+id/b5"
             style="@style/letras"
-            android:text="@string/c" />
+            android:text="@string/c"
+            android:onClick="click10"/>
 
         <Button
             android:id="@+id/b4"
             style="@style/letras"
-            android:text="@string/d" />
+            android:text="@string/d"
+            android:onClick="click11"/>
 
         <Button
             android:id="@+id/b3"
             style="@style/letras"
-            android:text="@string/e" />
+            android:text="@string/e"
+            android:onClick="click12"/>
 
         <Button
             android:id="@+id/b2"
             style="@style/letras"
-            android:text="@string/f" />
+            android:text="@string/f"
+            android:onClick="click13"/>
 
         <Button
             android:id="@+id/b1"
             style="@style/letras"
-            android:text="@string/g" />
+            android:text="@string/g"
+            android:onClick="click14"/>
     </LinearLayout>
 
     <LinearLayout
@@ -150,37 +170,44 @@
         <Button
             android:id="@+id/c7"
             style="@style/letras"
-            android:text="@string/h" />
+            android:text="@string/h"
+            android:onClick="click15"/>
 
         <Button
             android:id="@+id/c6"
             style="@style/letras"
-            android:text="@string/i" />
+            android:text="@string/i"
+            android:onClick="click16"/>
 
         <Button
             android:id="@+id/c5"
             style="@style/letras"
-            android:text="@string/j" />
+            android:text="@string/j"
+            android:onClick="click17"/>
 
         <Button
             android:id="@+id/c4"
             style="@style/letras"
-            android:text="@string/k" />
+            android:text="@string/k"
+            android:onClick="click18"/>
 
         <Button
             android:id="@+id/c3"
             style="@style/letras"
-            android:text="@string/l" />
+            android:text="@string/l"
+            android:onClick="click19"/>
 
         <Button
             android:id="@+id/c2"
             style="@style/letras"
-            android:text="@string/m" />
+            android:text="@string/m"
+            android:onClick="click20"/>
 
         <Button
             android:id="@+id/c1"
             style="@style/letras"
-            android:text="@string/n" />
+            android:text="@string/n"
+            android:onClick="click21"/>
     </LinearLayout>
 
     <LinearLayout
@@ -194,37 +221,44 @@
         <Button
             android:id="@+id/bH"
             style="@style/letras"
-            android:text="@string/h" />
+            android:text="@string/h"
+            android:onClick="click22"/>
 
         <Button
             android:id="@+id/bI"
             style="@style/letras"
-            android:text="@string/i" />
+            android:text="@string/i"
+            android:onClick="click23"/>
 
         <Button
             android:id="@+id/bJ"
             style="@style/letras"
-            android:text="@string/j" />
+            android:text="@string/j"
+            android:onClick="click24"/>
 
         <Button
             android:id="@+id/bK"
             style="@style/letras"
-            android:text="@string/k" />
+            android:text="@string/k"
+            android:onClick="click25"/>
 
         <Button
             android:id="@+id/bL"
             style="@style/letras"
-            android:text="@string/l" />
+            android:text="@string/l"
+            android:onClick="click26"/>
 
         <Button
             android:id="@+id/bM"
             style="@style/letras"
-            android:text="@string/m" />
+            android:text="@string/m"
+            android:onClick="click27"/>
 
         <Button
             android:id="@+id/bN"
             style="@style/letras"
-            android:text="@string/n" />
+            android:text="@string/n"
+            android:onClick="click28"/>
     </LinearLayout>
 
     <LinearLayout
@@ -238,37 +272,44 @@
         <Button
             android:id="@+id/a7"
             style="@style/letras"
-            android:text="@string/h" />
+            android:text="@string/h"
+            android:onClick="click29"/>
 
         <Button
             android:id="@+id/a6"
             style="@style/letras"
-            android:text="@string/i" />
+            android:text="@string/i"
+            android:onClick="click30"/>
 
         <Button
             android:id="@+id/a5"
             style="@style/letras"
-            android:text="@string/j" />
+            android:text="@string/j"
+            android:onClick="click31"/>
 
         <Button
             android:id="@+id/a4"
             style="@style/letras"
-            android:text="@string/k" />
+            android:text="@string/k"
+            android:onClick="click32"/>
 
         <Button
             android:id="@+id/a3"
             style="@style/letras"
-            android:text="@string/l" />
+            android:text="@string/l"
+            android:onClick="click33"/>
 
         <Button
             android:id="@+id/a2"
             style="@style/letras"
-            android:text="@string/m" />
+            android:text="@string/m"
+            android:onClick="click34"/>
 
         <Button
             android:id="@+id/a1"
             style="@style/letras"
-            android:text="@string/n" />
+            android:text="@string/n"
+            android:onClick="click35"/>
     </LinearLayout>
 
     <LinearLayout
@@ -282,47 +323,44 @@
         <Button
             android:id="@+id/bO"
             style="@style/letras"
-            android:text="@string/o" />
+            android:text="@string/o"
+            android:onClick="click35"/>
 
         <Button
             android:id="@+id/bP"
             style="@style/letras"
-            android:text="@string/p" />
+            android:text="@string/p"
+            android:onClick="click37"/>
 
         <Button
             android:id="@+id/bQ"
             style="@style/letras"
-            android:text="@string/q" />
+            android:text="@string/q"
+            android:onClick="click38"/>
 
         <Button
             android:id="@+id/bR"
             style="@style/letras"
-            android:text="@string/r" />
+            android:text="@string/r"
+            android:onClick="click39"/>
 
         <Button
             android:id="@+id/bS"
             style="@style/letras"
-            android:text="@string/s" />
+            android:text="@string/s"
+            android:onClick="click40"/>
 
         <Button
             android:id="@+id/bT"
             style="@style/letras"
-            android:text="@string/t" />
+            android:text="@string/t"
+            android:onClick="click41"/>
 
         <Button
             android:id="@+id/bU"
             style="@style/letras"
-            android:text="@string/u" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="178dp"
-        android:orientation="horizontal">
+            android:text="@string/u"
+            android:onClick="click42"/>
 
     </LinearLayout>
 
@@ -336,7 +374,7 @@
         android:textSize="30dp"
         android:textColor="@color/bgbotom"
         android:textStyle="bold"
-        android:text="Ache a letra b" />
+        android:text="@string/ache_a_letra_b_min_scula" />
 
     <Button
         android:id="@+id/button"
@@ -345,7 +383,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="16dp"
-        android:text="Voltar" />
+        android:text="@string/back"
+        android:onClick="voltar"/>
 
 
 </RelativeLayout>
