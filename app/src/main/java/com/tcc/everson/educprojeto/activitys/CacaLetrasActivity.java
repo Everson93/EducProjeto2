@@ -23,6 +23,7 @@ public class CacaLetrasActivity extends AppCompatActivity {
                 a1, a2, a3, a4, a5, a6, a7,
                 bO, bP, bQ, bR, bS, bT, bU;
         int chance = 3;
+        int acerto;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -85,9 +86,30 @@ public class CacaLetrasActivity extends AppCompatActivity {
             boolean resultado;
 
             if (button.getText().toString() == "b") {
+                acerto ++;
                 PorterDuffColorFilter colorFilter = new PorterDuffColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
                 button.getBackground().setColorFilter(colorFilter);
                 resultado = true;
+                if (acerto==3){
+                    AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(CacaLetrasActivity.this);
+                    dialogBuilder.setTitle("Parabéns você acertou 3 vezes!")
+                            .setMessage("Deseja jogar novamente?")
+                            .setCancelable(false)
+                            .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface arg0, int arg1) {
+                                    Intent intent = getIntent();
+                                    finish();
+                                    startActivity(intent);
+                                }
+                            })
+                            .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface arg0, int arg1) {
+                                    finish();
+                                }
+                            });
+                    AlertDialog dialog = dialogBuilder.create();
+                    dialog.show();
+                }
             } else {
                 chance --;
                 PorterDuffColorFilter colorFilter = new PorterDuffColorFilter(Color.RED, PorterDuff.Mode.MULTIPLY);
