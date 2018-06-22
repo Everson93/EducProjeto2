@@ -299,6 +299,7 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
         palavraSecreta = splitPalavra;
         tvDica.setText(splitTema);
         final String teste = splitPalavra.substring(0,1);
+        final String dica3 = splitPalavra.substring(1,3);
         int tamanho = splitPalavra.length();
         final String teste2 = splitPalavra.substring(tamanho-1, tamanho);
 
@@ -383,7 +384,7 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
                     new MediaPlayer().create(context,R.raw.letraw).start();
                 }
                 if (teste.equalsIgnoreCase("Z")){
-                    new MediaPlayer().create(context,R.raw.letraz).start();
+                    new MediaPlayer().create(context,R.raw.lerraz).start();
                 }
                 imgAudio.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -392,85 +393,85 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
                             new MediaPlayer().create(context,R.raw.letraa).start();
                         }
                         if (teste2.equalsIgnoreCase("B")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrab).start();
                         }
                         if (teste2.equalsIgnoreCase("C")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrac).start();
                         }
                         if (teste2.equalsIgnoreCase("D")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrad).start();
                         }
                         if (teste2.equalsIgnoreCase("E")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrae).start();
                         }
                         if (teste2.equalsIgnoreCase("F")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letraf).start();
                         }
                         if (teste2.equalsIgnoreCase("G")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrag).start();
                         }
                         if (teste2.equalsIgnoreCase("H")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrah).start();
                         }
                         if (teste2.equalsIgnoreCase("I")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrai).start();
                         }
                         if (teste2.equalsIgnoreCase("J")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letraj).start();
                         }
                         if (teste2.equalsIgnoreCase("K")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrak).start();
                         }
                         if (teste2.equalsIgnoreCase("L")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letral).start();
                         }
                         if (teste2.equalsIgnoreCase("M")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letram).start();
                         }
                         if (teste2.equalsIgnoreCase("N")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letran).start();
                         }
                         if (teste2.equalsIgnoreCase("O")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrao).start();
                         }
                         if (teste2.equalsIgnoreCase("P")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrap).start();
                         }
                         if (teste2.equalsIgnoreCase("Q")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letraq).start();
                         }
                         if (teste2.equalsIgnoreCase("R")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrar).start();
                         }
                         if (teste2.equalsIgnoreCase("S")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letras).start();
                         }
                         if (teste2.equalsIgnoreCase("T")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrat).start();
                         }
                         if (teste2.equalsIgnoreCase("U")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrau).start();
                         }
                         if (teste2.equalsIgnoreCase("V")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrav).start();
                         }
                         if (teste2.equalsIgnoreCase("X")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letrax).start();
                         }
                         if (teste2.equalsIgnoreCase("Y")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letray).start();
                         }
                         if (teste2.equalsIgnoreCase("W")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.letraw).start();
                         }
                         if (teste2.equalsIgnoreCase("Z")){
-                            new MediaPlayer().create(context,R.raw.letraa).start();
+                            new MediaPlayer().create(context,R.raw.lerraz).start();
                         }
 
                     }
                 });
 
-        }
+            }
         });
 
 
