@@ -192,7 +192,7 @@ public class CacaLetrasActivity extends AppCompatActivity {
 
         public String embaralha() {
             Random random = new Random();
-            int numero = random.nextInt(28);
+            int numero = random.nextInt(33);
             String letra = "";
 
             switch (numero) {
@@ -254,6 +254,16 @@ public class CacaLetrasActivity extends AppCompatActivity {
                 break;
                 case 28: letra="d";
                 break;
+                case 29: letra="b";
+                    break;
+                case 30: letra="b";
+                    break;
+                case 31: letra="d";
+                    break;
+                case 32: letra="d";
+                    break;
+                case 33: letra="d";
+                    break;
             }
             return letra;
         }

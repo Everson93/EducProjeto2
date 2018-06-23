@@ -36,7 +36,8 @@
         <activity
             android:name=".activitys.AcionaJogoForcaActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activitys.CacaLetrasActivity"></activity>
+        <activity android:name=".activitys.CacaLetrasActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
