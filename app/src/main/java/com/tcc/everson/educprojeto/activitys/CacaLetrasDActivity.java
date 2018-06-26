@@ -17,7 +17,7 @@ import com.tcc.everson.educprojeto.R;
 
 import java.util.Random;
 
-public class CacaLetrasActivity extends AppCompatActivity {
+public class CacaLetrasDActivity extends AppCompatActivity {
 
     Button bA, bB, bC, bD, bE, bF, bG,
             b1, b2, b3, b4, b5, b6, b7,
@@ -26,14 +26,15 @@ public class CacaLetrasActivity extends AppCompatActivity {
             a1, a2, a3, a4, a5, a6, a7,
             bO, bP, bQ, bR, bS, bT, bU;
     private int chance = 3;
-    private int quantidadeB = 0;
+    private int quantidadeD = 0;
     private int contLetra;
     private Context contexto = this;
+    MediaPlayer audio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_caca_letras);
+        setContentView(R.layout.activity_caca_letras_d);
 
         bA = findViewById(R.id.bA);
         bB = findViewById(R.id.bB);
@@ -90,27 +91,24 @@ public class CacaLetrasActivity extends AppCompatActivity {
     public boolean confereBotao(Button button) {
         boolean resultado;
 
-        if (button.getText().toString() == "b") {
-            quantidadeB++;
+        if (button.getText().toString() == "d") {
+            quantidadeD++;
             PorterDuffColorFilter colorFilter = new PorterDuffColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
             button.getBackground().setColorFilter(colorFilter);
-            if (quantidadeB == contLetra) {
-
-                new MediaPlayer().create(this,R.raw.silvio).start();
-                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(CacaLetrasActivity.this);
+            if (quantidadeD == contLetra) {
+                audio.create(this,R.raw.silvio).start();
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(CacaLetrasDActivity.this);
                 dialogBuilder.setTitle("Parabéns")
-                        .setMessage("Parabéns, deseja ir para o próximo?")
+                        .setMessage("Parabéns, Retornar para tela inicial?")
                         .setCancelable(false)
                         .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface arg0, int arg1) {
-                                Intent intent = new Intent(contexto, CacaLetrasDActivity.class);
                                 finish();
-                                startActivity(intent);
                             }
                         })
                         .setNegativeButton("Repetir", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface arg0, int arg1) {
-                                Intent intent = getIntent();
+                                Intent intent = new Intent(contexto, CacaLetrasActivity.class);
                                 finish();
                                 startActivity(intent);
                             }
@@ -118,14 +116,14 @@ public class CacaLetrasActivity extends AppCompatActivity {
                 AlertDialog dialog = dialogBuilder.create();
                 dialog.show();
             }
-                resultado = true;
+            resultado = true;
         } else {
             chance --;
             PorterDuffColorFilter colorFilter = new PorterDuffColorFilter(Color.RED, PorterDuff.Mode.MULTIPLY);
             button.getBackground().setColorFilter(colorFilter);
             if (chance == 0) {
-                new MediaPlayer().create(this,R.raw.silvioerro).start();
-                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(CacaLetrasActivity.this);
+                audio.create(this,R.raw.silvioerro).start();
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(CacaLetrasDActivity.this);
                 dialogBuilder.setTitle("Perdeu!")
                         .setMessage("Deseja jogar novamente?")
                         .setCancelable(false)
@@ -151,6 +149,7 @@ public class CacaLetrasActivity extends AppCompatActivity {
     }
 
     public int setarBotoes() {
+
         bA.setText(embaralha());
         bB.setText(embaralha());
         bC.setText(embaralha());
@@ -199,131 +198,129 @@ public class CacaLetrasActivity extends AppCompatActivity {
         bT.setText(embaralha());
         bU.setText(embaralha());
 
-        if (bA.getText().toString().equals("b")) {
+        if (bA.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bB.getText().toString().equals("b")) {
+        if (bB.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bC.getText().toString().equals("b")) {
+        if (bC.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bD.getText().toString().equals("b")) {
+        if (bD.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bE.getText().toString().equals("b")) {
+        if (bE.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bF.getText().toString().equals("b")) {
+        if (bF.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (b1.getText().toString().equals("b")) {
+        if (b1.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (b2.getText().toString().equals("b")) {
+        if (b2.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (b3.getText().toString().equals("b")) {
+        if (b3.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (b4.getText().toString().equals("b")) {
+        if (b4.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (b5.getText().toString().equals("b")) {
+        if (b5.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (b6.getText().toString().equals("b")) {
+        if (b6.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (b7.getText().toString().equals("b")) {
+        if (b7.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (c1.getText().toString().equals("b")) {
+        if (c1.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (c2.getText().toString().equals("b")) {
+        if (c2.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (c3.getText().toString().equals("b")) {
+        if (c3.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (c4.getText().toString().equals("b")) {
+        if (c4.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (c5.getText().toString().equals("b")) {
+        if (c5.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (c6.getText().toString().equals("b")) {
+        if (c6.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (c7.getText().toString().equals("b")) {
+        if (c7.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bH.getText().toString().equals("b")) {
+        if (bH.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bI.getText().toString().equals("b")) {
+        if (bI.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bJ.getText().toString().equals("b")) {
+        if (bJ.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bK.getText().toString().equals("b")) {
+        if (bK.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bL.getText().toString().equals("b")) {
+        if (bL.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bM.getText().toString().equals("b")) {
+        if (bM.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bN.getText().toString().equals("b")) {
+        if (bN.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (a1.getText().toString().equals("b")) {
+        if (a1.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (a2.getText().toString().equals("b")) {
+        if (a2.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (a3.getText().toString().equals("b")) {
+        if (a3.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (a4.getText().toString().equals("b")) {
+        if (a4.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (a5.getText().toString().equals("b")) {
+        if (a5.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (a6.getText().toString().equals("b")) {
+        if (a6.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (a7.getText().toString().equals("b")) {
+        if (a7.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bO.getText().toString().equals("b")) {
+        if (bO.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bP.getText().toString().equals("b")) {
+        if (bP.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bQ.getText().toString().equals("b")) {
+        if (bQ.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bR.getText().toString().equals("b")) {
+        if (bR.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bS.getText().toString().equals("b")) {
+        if (bS.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bT.getText().toString().equals("b")) {
+        if (bT.getText().toString().equals("d")) {
             contLetra++;
         }
-        if (bU.getText().toString().equals("b")) {
+        if (bU.getText().toString().equals("d")) {
             contLetra++;
         }
-
-
         return contLetra;
     }
 
@@ -334,63 +331,63 @@ public class CacaLetrasActivity extends AppCompatActivity {
 
         switch (numero) {
             case 0: letra="a";
-            break;
+                break;
             case 1: letra="b";
-            break;
+                break;
             case 2: letra="c";
-            break;
+                break;
             case 3: letra="d";
-            break;
+                break;
             case 4: letra="e";
-            break;
+                break;
             case 5: letra="f";
-            break;
+                break;
             case 6: letra="g";
-            break;
+                break;
             case 7: letra="h";
-            break;
+                break;
             case 8: letra="i";
-            break;
+                break;
             case 9: letra="j";
-            break;
+                break;
             case 10: letra="k";
-            break;
+                break;
             case 11: letra="l";
-            break;
+                break;
             case 12: letra="m";
-            break;
+                break;
             case 13: letra="n";
-            break;
+                break;
             case 14: letra="o";
-            break;
+                break;
             case 15: letra="p";
-            break;
+                break;
             case 16: letra="q";
-            break;
+                break;
             case 17: letra="r";
-            break;
+                break;
             case 18: letra="s";
-            break;
+                break;
             case 19: letra="t";
-            break;
+                break;
             case 20: letra="u";
-            break;
+                break;
             case 21: letra="v";
-            break;
+                break;
             case 22: letra="w";
-            break;
+                break;
             case 23: letra="x";
-            break;
+                break;
             case 24: letra="y";
-            break;
+                break;
             case 25: letra="z";
-            break;
-            case 26: letra="b";
-            break;
-            case 27: letra="b";
-            break;
-            case 28: letra="d";
-            break;
+                break;
+            case 26: letra="d";
+                break;
+            case 27: letra="d";
+                break;
+            case 28: letra="b";
+                break;
         }
         return letra;
     }
@@ -561,5 +558,9 @@ public class CacaLetrasActivity extends AppCompatActivity {
 
     public void click42(View view) {
         confereBotao(bU);
+    }
+
+    public void voltar(View view) {
+        finish();
     }
 }

@@ -47,4 +47,8 @@
     <string name="come_ar">Começar</string>
     <string name="back">Voltar</string>
     <string name="ache_a_letra_b_min_scula">Ache a Letra B minuscula</string>
+    <string name="ache_a_letra_d_min_scula">Ache a Letra D minuscula</string>
+    <string name="dica_3">Dica 3</string>
+    <string name="dica_2">Dica 2</string>
+    <string name="dica_1">Dica 1</string>
 </resources>
