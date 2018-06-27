@@ -29,7 +29,7 @@ public class CacaLetrasDActivity extends AppCompatActivity {
     private int quantidadeD = 0;
     private int contLetra;
     private Context contexto = this;
-    MediaPlayer audio;
+    MediaPlayer acertou,errou;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +96,7 @@ public class CacaLetrasDActivity extends AppCompatActivity {
             PorterDuffColorFilter colorFilter = new PorterDuffColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
             button.getBackground().setColorFilter(colorFilter);
             if (quantidadeD == contLetra) {
-                audio.create(this,R.raw.silvio).start();
+                acertou.create(this,R.raw.silvio).start();
                 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(CacaLetrasDActivity.this);
                 dialogBuilder.setTitle("Parabéns")
                         .setMessage("Parabéns, Retornar para tela inicial?")
@@ -122,7 +122,7 @@ public class CacaLetrasDActivity extends AppCompatActivity {
             PorterDuffColorFilter colorFilter = new PorterDuffColorFilter(Color.RED, PorterDuff.Mode.MULTIPLY);
             button.getBackground().setColorFilter(colorFilter);
             if (chance == 0) {
-                audio.create(this,R.raw.silvioerro).start();
+                acertou.create(this,R.raw.silvioerro).start();
                 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(CacaLetrasDActivity.this);
                 dialogBuilder.setTitle("Perdeu!")
                         .setMessage("Deseja jogar novamente?")

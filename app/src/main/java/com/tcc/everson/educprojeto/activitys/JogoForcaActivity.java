@@ -28,7 +28,7 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
     Palavras palavras;
     String teste;
     Context context = this;
-    MediaPlayer audio;
+    MediaPlayer audio,acertou,errou;
 
     TextView tvPalavra;
     TextView tvDica;
@@ -77,7 +77,7 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
                 case 0:
                     forca.setImageResource(R.drawable.forca_5);
                     desabilitarBotoes();
-                    new MediaPlayer().create(this,R.raw.silvioerro).start();
+                    errou.create(this,R.raw.silvioerro).start();
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(JogoForcaActivity.this);
                     dialogBuilder.setTitle("Perdeu!")
                             .setMessage("A palavra secreta era: "+palavraSecreta+" \n Deseja jogar novamente?")
@@ -101,7 +101,7 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
 
         if (Replace.replaceAll(tracos, " ", "").equalsIgnoreCase(palavraSecreta)) {
             desabilitarBotoes();
-            audio.create(this,R.raw.silvio).start();
+            acertou.create(this,R.raw.silvio).start();
             AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
             AlertDialog.Builder builder = dialogBuilder;
             builder.setTitle("Parabéns!");
@@ -304,261 +304,33 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
         splitTema = palavra[1];                   //segunda palavra do split na segunda posicao do array
         palavraSecreta = splitPalavra;
         tvDica.setText(splitTema);
-        final String teste = splitPalavra.substring(0,1);
-        final String dica03 = splitPalavra.substring(1,2);
+        final String dicaA = splitPalavra.substring(0,1);
+        final String dicaB = splitPalavra.substring(1,2);
         int tamanho = splitPalavra.length();
-        final String teste2 = splitPalavra.substring(tamanho-1, tamanho);
+        final String dicaC= splitPalavra.substring(tamanho-1, tamanho);
 
 
 
         dica1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (teste.equalsIgnoreCase("A")){
-                    audio.create(context,R.raw.letraa).start();
-                }
-                if (teste.equalsIgnoreCase("B")){
-                    new MediaPlayer().create(context,R.raw.letrab).start();
-                }
-                if (teste.equalsIgnoreCase("C")){
-                    audio.create(context,R.raw.letrac).start();
-                }
-                if (teste.equalsIgnoreCase("D")){
-                    audio.create(context,R.raw.letrad).start();
-                }
-                if (teste.equalsIgnoreCase("E")){
-                    audio.create(context,R.raw.letrae).start();
-                }
-                if (teste.equalsIgnoreCase("F")){
-                    audio.create(context,R.raw.letraf).start();
-                }
-                if (teste.equalsIgnoreCase("G")){
-                    audio.create(context,R.raw.letrag).start();
-                }
-                if (teste.equalsIgnoreCase("H")){
-                    audio.create(context,R.raw.letrah).start();
-                }
-                if (teste.equalsIgnoreCase("I")){
-                    audio.create(context,R.raw.letrai).start();
-                }
-                if (teste.equalsIgnoreCase("J")){
-                    audio.create(context,R.raw.letraj).start();
-                }
-                if (teste.equalsIgnoreCase("K")){
-                    audio.create(context,R.raw.letrak).start();
-                }
-                if (teste.equalsIgnoreCase("L")){
-                    audio.create(context,R.raw.letral).start();
-                }
-                if (teste.equalsIgnoreCase("M")){
-                    audio.create(context,R.raw.letram).start();
-                }
-                if (teste.equalsIgnoreCase("N")){
-                    audio.create(context,R.raw.letran).start();
-                }
-                if (teste.equalsIgnoreCase("O")){
-                    audio.create(context,R.raw.letrao).start();
-                }
-                if (teste.equalsIgnoreCase("P")){
-                    audio.create(context,R.raw.letrap).start();
-                }
-                if (teste.equalsIgnoreCase("Q")){
-                    audio.create(context,R.raw.letraq).start();
-                }
-                if (teste.equalsIgnoreCase("R")){
-                    audio.create(context,R.raw.letrar).start();
-                }
-                if (teste.equalsIgnoreCase("S")){
-                    audio.create(context,R.raw.letras).start();
-                }
-                if (teste.equalsIgnoreCase("T")){
-                    audio.create(context,R.raw.letrat).start();
-                }
-                if (teste.equalsIgnoreCase("U")){
-                    audio.create(context,R.raw.letrau).start();
-                }
-                if (teste.equalsIgnoreCase("V")){
-                    audio.create(context,R.raw.letrav).start();
-                }
-                if (teste.equalsIgnoreCase("X")){
-                    audio.create(context,R.raw.letrax).start();
-                }
-                if (teste.equalsIgnoreCase("Y")){
-                    audio.create(context,R.raw.letray).start();
-                }
-                if (teste.equalsIgnoreCase("W")){
-                    audio.create(context,R.raw.letraw).start();
-                }
-                if (teste.equalsIgnoreCase("Z")){
-                    audio.create(context,R.raw.lerraz).start();
-                }
+                int dicaN1 = getResources().getIdentifier("letra".concat(dicaA).toLowerCase(),"raw", "com.tcc.everson.educprojeto");
+                setAudio(dicaN1);
             }
         });
         dica2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (teste2.equalsIgnoreCase("A")){
-                    audio.create(context,R.raw.letraa).start();
-                }
-                if (teste2.equalsIgnoreCase("B")){
-                    audio.create(context,R.raw.letrab).start();
-                }
-                if (teste2.equalsIgnoreCase("C")){
-                    audio.create(context,R.raw.letrac).start();
-                }
-                if (teste2.equalsIgnoreCase("D")){
-                    audio.create(context,R.raw.letrad).start();
-                }
-                if (teste2.equalsIgnoreCase("E")){
-                    audio.create(context,R.raw.letrae).start();
-                }
-                if (teste2.equalsIgnoreCase("F")){
-                    audio.create(context,R.raw.letraf).start();
-                }
-                if (teste2.equalsIgnoreCase("G")){
-                    audio.create(context,R.raw.letrag).start();
-                }
-                if (teste2.equalsIgnoreCase("H")){
-                    audio.create(context,R.raw.letrah).start();
-                }
-                if (teste2.equalsIgnoreCase("I")){
-                    audio.create(context,R.raw.letrai).start();
-                }
-                if (teste2.equalsIgnoreCase("J")){
-                    audio.create(context,R.raw.letraj).start();
-                }
-                if (teste2.equalsIgnoreCase("K")){
-                    audio.create(context,R.raw.letrak).start();
-                }
-                if (teste2.equalsIgnoreCase("L")){
-                    audio.create(context,R.raw.letral).start();
-                }
-                if (teste2.equalsIgnoreCase("M")){
-                    audio.create(context,R.raw.letram).start();
-                }
-                if (teste2.equalsIgnoreCase("N")){
-                    audio.create(context,R.raw.letran).start();
-                }
-                if (teste2.equalsIgnoreCase("O")){
-                    audio.create(context,R.raw.letrao).start();
-                }
-                if (teste2.equalsIgnoreCase("P")){
-                    audio.create(context,R.raw.letrap).start();
-                }
-                if (teste2.equalsIgnoreCase("Q")){
-                    audio.create(context,R.raw.letraq).start();
-                }
-                if (teste2.equalsIgnoreCase("R")){
-                    audio.create(context,R.raw.letrar).start();
-                }
-                if (teste2.equalsIgnoreCase("S")){
-                    audio.create(context,R.raw.letras).start();
-                }
-                if (teste2.equalsIgnoreCase("T")){
-                    audio.create(context,R.raw.letrat).start();
-                }
-                if (teste2.equalsIgnoreCase("U")){
-                    audio.create(context,R.raw.letrau).start();
-                }
-                if (teste2.equalsIgnoreCase("V")){
-                    audio.create(context,R.raw.letrav).start();
-                }
-                if (teste2.equalsIgnoreCase("X")){
-                    audio.create(context,R.raw.letrax).start();
-                }
-                if (teste2.equalsIgnoreCase("Y")){
-                    audio.create(context,R.raw.letray).start();
-                }
-                if (teste2.equalsIgnoreCase("W")){
-                    audio.create(context,R.raw.letraw).start();
-                }
-                if (teste2.equalsIgnoreCase("Z")){
-                    audio.create(context,R.raw.lerraz).start();
-                }
+                int dicaN1 = getResources().getIdentifier("letra".concat(dicaB).toLowerCase(),"raw", "com.tcc.everson.educprojeto");
+                setAudio(dicaN1);
 
             }
         });
         dica3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (dica03.equalsIgnoreCase("A")){
-                    audio.create(context,R.raw.letraa).start();
-                }
-                if (dica03.equalsIgnoreCase("B")){
-                    audio.create(context,R.raw.letrab).start();
-                }
-                if (dica03.equalsIgnoreCase("C")){
-                    audio.create(context,R.raw.letrac).start();
-                }
-                if (dica03.equalsIgnoreCase("D")){
-                    audio.create(context,R.raw.letrad).start();
-                }
-                if (dica03.equalsIgnoreCase("E")){
-                    audio.create(context,R.raw.letrae).start();
-                }
-                if (dica03.equalsIgnoreCase("F")){
-                    audio.create(context,R.raw.letraf).start();
-                }
-                if (dica03.equalsIgnoreCase("G")){
-                    audio.create(context,R.raw.letrag).start();
-                }
-                if (dica03.equalsIgnoreCase("H")){
-                    audio.create(context,R.raw.letrah).start();
-                }
-                if (dica03.equalsIgnoreCase("I")){
-                    audio.create(context,R.raw.letrai).start();
-                }
-                if (dica03.equalsIgnoreCase("J")){
-                    audio.create(context,R.raw.letraj).start();
-                }
-                if (dica03.equalsIgnoreCase("K")){
-                    audio.create(context,R.raw.letrak).start();
-                }
-                if (dica03.equalsIgnoreCase("L")){
-                    audio.create(context,R.raw.letral).start();
-                }
-                if (dica03.equalsIgnoreCase("M")){
-                    audio.create(context,R.raw.letram).start();
-                }
-                if (dica03.equalsIgnoreCase("N")){
-                    audio.create(context,R.raw.letran).start();
-                }
-                if (dica03.equalsIgnoreCase("O")){
-                    audio.create(context,R.raw.letrao).start();
-                }
-                if (dica03.equalsIgnoreCase("P")){
-                    audio.create(context,R.raw.letrap).start();
-                }
-                if (dica03.equalsIgnoreCase("Q")){
-                    audio.create(context,R.raw.letraq).start();
-                }
-                if (dica03.equalsIgnoreCase("R")){
-                    audio.create(context,R.raw.letrar).start();
-                }
-                if (dica03.equalsIgnoreCase("S")){
-                    audio.create(context,R.raw.letras).start();
-                }
-                if (dica03.equalsIgnoreCase("T")){
-                    audio.create(context,R.raw.letrat).start();
-                }
-                if (dica03.equalsIgnoreCase("U")){
-                    audio.create(context,R.raw.letrau).start();
-                }
-                if (dica03.equalsIgnoreCase("V")){
-                    audio.create(context,R.raw.letrav).start();
-                }
-                if (dica03.equalsIgnoreCase("X")){
-                    audio.create(context,R.raw.letrax).start();
-                }
-                if (dica03.equalsIgnoreCase("Y")){
-                    audio.create(context,R.raw.letray).start();
-                }
-                if (dica03.equalsIgnoreCase("W")){
-                    audio.create(context,R.raw.letraw).start();
-                }
-                if (dica03.equalsIgnoreCase("Z")){
-                    audio.create(context,R.raw.lerraz).start();
-                }
+                int dicaN1 = getResources().getIdentifier("letra".concat(dicaC).toLowerCase(),"raw","com.tcc.everson.educprojeto");
+                setAudio(dicaN1);
 
             }
         });
@@ -610,4 +382,7 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
         return acerto;
     }
 
+    public void setAudio(int letras){
+        audio.create(this,letras).start();
+    }
 }
