@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,8 +16,10 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseError;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
@@ -30,7 +33,7 @@ import com.tcc.everson.educprojeto.helper.Preferencias;
 public class CadastrosActivity extends AppCompatActivity {
 
     EditText edtNome,edtSobrenome,edtEmail,edtSenha,edtConfrimaSenha;
-    Button cadastrar;
+    Button cadastro;
     Context context = this;
     Usuarios usuarios;
     FirebaseAuth autenticacao;
@@ -45,12 +48,15 @@ public class CadastrosActivity extends AppCompatActivity {
         edtEmail = findViewById(R.id.edtEmail);
         edtSenha = findViewById(R.id.edtSenha);
         edtConfrimaSenha = findViewById(R.id.edtConfirmarSenha);
-        cadastrar = findViewById(R.id.cadastar);
+        cadastro = findViewById(R.id.cadastro);
 
-        cadastrar.setOnClickListener(new View.OnClickListener() {
+        cadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                verificaConexao();
+
                 validaCampos();
+
                 if (edtSenha.getText().toString().equals(edtConfrimaSenha.getText().toString())){
 
                     usuarios = new Usuarios();
@@ -100,7 +106,10 @@ public class CadastrosActivity extends AppCompatActivity {
                         erroExcecao = "O email digitado e inválido !!";
                     }catch (FirebaseAuthUserCollisionException e ){
                         erroExcecao = "Email ja cadastrado tente novamente !!";
-                    }catch (Exception e ){
+                    }catch (FirebaseAuthException e){
+                        erroExcecao = "erro !!";
+                    }
+                    catch (Exception e ){
                         erroExcecao = "Erro ao Efetua Cadastro !!";
                         e.printStackTrace();
                     }
@@ -155,5 +164,18 @@ public class CadastrosActivity extends AppCompatActivity {
         boolean resultado = (TextUtils.isEmpty(campo) || campo.trim().isEmpty());//verifica se esta vazio e sem espaços
         return resultado;
 
+    }
+    public  boolean verificaConexao() {
+        boolean conectado;
+        ConnectivityManager conectivtyManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (conectivtyManager.getActiveNetworkInfo() != null
+                && conectivtyManager.getActiveNetworkInfo().isAvailable()
+                && conectivtyManager.getActiveNetworkInfo().isConnected()) {
+            conectado = true;
+        } else {
+            conectado = false;
+            Toast.makeText(this,"Verefique conexão!!",Toast.LENGTH_SHORT).show();
+        }
+        return conectado;
     }
 }

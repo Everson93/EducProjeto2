@@ -384,5 +384,7 @@ public class JogoForcaActivity extends AppCompatActivity implements View.OnClick
 
     public void setAudio(int letras){
         audio.create(this,letras).start();
+
+
     }
 }
