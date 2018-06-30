@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/bg"
     tools:context=".activitys.CadastrosActivity">
+
+    <TextView
+        android:id="@+id/topCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/cadastro_de_usuario"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/bgbotom"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="104dp" />
+
+    <EditText
+        android:id="@+id/edtnome"
+        android:layout_width="347dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:background="@color/bgcampos"
+        android:ems="10"
+        android:hint="@string/nome_de_usuario"
+        android:inputType="text"
+        android:maxLength="10"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="256dp" />
 
     <EditText
         android:id="@+id/edtSobreNome"
         android:layout_width="347dp"
         android:layout_height="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="163dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@color/bgcampos"
         android:ems="10"
         android:hint="@string/sobrenome"
@@ -26,9 +53,8 @@
         android:id="@+id/edtEmail"
         android:layout_width="347dp"
         android:layout_height="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="221dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@color/bgcampos"
         android:ems="10"
         android:hint="@string/email"
@@ -37,26 +63,14 @@
         tools:layout_editor_absoluteX="19dp"
         tools:layout_editor_absoluteY="211dp" />
 
-    <TextView
-        android:id="@+id/topCadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="@string/cadastro_de_usuario"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="104dp" />
+
 
     <EditText
         android:id="@+id/edtSenha"
         android:layout_width="347dp"
         android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="256dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@color/bgcampos"
         android:ems="10"
         android:hint="@string/senha"
@@ -65,28 +79,13 @@
         tools:layout_editor_absoluteX="19dp"
         tools:layout_editor_absoluteY="256dp" />
 
-    <EditText
-        android:id="@+id/edtnome"
-        android:layout_width="347dp"
-        android:layout_height="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="108dp"
-        android:background="@color/bgcampos"
-        android:ems="10"
-        android:hint="@string/nome_de_usuario"
-        android:inputType="text"
-        android:maxLength="10"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="256dp" />
 
     <EditText
         android:id="@+id/edtConfirmarSenha"
         android:layout_width="347dp"
         android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@color/bgcampos"
         android:ems="10"
         android:hint="@string/confirmar_senha"
@@ -99,9 +98,8 @@
         android:id="@+id/cadastro"
         android:layout_width="104dp"
         android:layout_height="37dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="115dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:background="@color/btcadastro"
         android:text="@string/cadastrar"
         android:textColor="@android:color/background_light"
@@ -109,4 +107,4 @@
         tools:layout_editor_absoluteX="59dp"
         tools:layout_editor_absoluteY="312dp" />
 
-</RelativeLayout>
+</LinearLayout>

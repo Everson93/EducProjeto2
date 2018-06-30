@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#f7ffffff</color>
     <color name="colorAccent">#FF4081</color>
     <color name="btcadastro">#e4282828</color>
-    <color name="bgcampos">#11000000</color>
+    <color name="bgcampos">#6c000000</color>
     <color name="bgbotom">#000000</color>
     <color name="repetir">#000</color>
 </resources>

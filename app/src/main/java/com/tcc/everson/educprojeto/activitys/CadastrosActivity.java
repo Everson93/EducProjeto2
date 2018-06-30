@@ -53,24 +53,22 @@ public class CadastrosActivity extends AppCompatActivity {
         cadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                verificaConexao();
+                if (!validaCampos()){
+                    if (edtSenha.getText().toString().equals(edtConfrimaSenha.getText().toString())){
 
-                validaCampos();
+                        usuarios = new Usuarios();
+                        usuarios.setNome(edtNome.getText().toString());
+                        usuarios.setSobrenome(edtSobrenome.getText().toString());
+                        usuarios.setEmail(edtEmail.getText().toString());
+                        usuarios.setSenha(edtSenha.getText().toString());
+                        usuarios.setConfirmasenha(edtConfrimaSenha.getText().toString());
 
-                if (edtSenha.getText().toString().equals(edtConfrimaSenha.getText().toString())){
-
-                    usuarios = new Usuarios();
-                    usuarios.setNome(edtNome.getText().toString());
-                    usuarios.setSobrenome(edtSobrenome.getText().toString());
-                    usuarios.setEmail(edtEmail.getText().toString());
-                    usuarios.setSenha(edtSenha.getText().toString());
-                    usuarios.setConfirmasenha(edtConfrimaSenha.getText().toString());
-
-                    cadastrarUsuario();
+                        cadastrarUsuario();
 
 
-                }else{
-                    Toast.makeText(context,"Senhas não conferem",Toast.LENGTH_LONG).show();
+                    }else{
+                        Toast.makeText(context,"Senhas não conferem",Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });
@@ -101,6 +99,7 @@ public class CadastrosActivity extends AppCompatActivity {
                     try {
                         throw task.getException();
                     }catch (FirebaseAuthWeakPasswordException e ){
+
                         erroExcecao = "Digite uma Senha mais forte, contedo letras !!";
                     }catch (FirebaseAuthInvalidCredentialsException e ){
                         erroExcecao = "O email digitado e inválido !!";
@@ -110,10 +109,10 @@ public class CadastrosActivity extends AppCompatActivity {
                         erroExcecao = "erro !!";
                     }
                     catch (Exception e ){
-                        erroExcecao = "Erro ao Efetua Cadastro !!";
+                        erroExcecao = "Erro ao Efetuar Cadastro !!";
                         e.printStackTrace();
                     }
-                    Toast.makeText(context,"Erro: "+erroExcecao,Toast.LENGTH_LONG).show();
+                    Toast.makeText(context,"Verifique Sua Conexão!: "+erroExcecao,Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -127,27 +126,28 @@ public class CadastrosActivity extends AppCompatActivity {
     private boolean validaCampos(){
 
         boolean teste = false;
+        String sobreNome = edtSobrenome.getText().toString();
         String nome = edtNome.getText().toString();
         String senha = edtSenha.getText().toString();
         String email = edtEmail.getText().toString();
         String confirmaSenha = edtConfrimaSenha.getText().toString();
-        String sobreNome = edtSobrenome.getText().toString();
+
 
 
         if (campoVazio(nome)){
             edtNome.requestFocus();
             teste = true;
-        }else if(campoVazio(senha)){
-            edtSenha.requestFocus();
+        }else if(campoVazio(sobreNome)){
+            edtSobrenome.requestFocus();
             teste = true;
         }else if(campoVazio(email)){
             edtEmail.requestFocus();
             teste = true;
+        }else if(campoVazio(senha)){
+            edtSenha.requestFocus();
+            teste = true;
         }else if(campoVazio(confirmaSenha)){
             edtConfrimaSenha.requestFocus();
-            teste = true;
-        }else if(campoVazio(sobreNome)){
-            edtSobrenome.requestFocus();
             teste = true;
         }
         if (teste){
@@ -165,17 +165,5 @@ public class CadastrosActivity extends AppCompatActivity {
         return resultado;
 
     }
-    public  boolean verificaConexao() {
-        boolean conectado;
-        ConnectivityManager conectivtyManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        if (conectivtyManager.getActiveNetworkInfo() != null
-                && conectivtyManager.getActiveNetworkInfo().isAvailable()
-                && conectivtyManager.getActiveNetworkInfo().isConnected()) {
-            conectado = true;
-        } else {
-            conectado = false;
-            Toast.makeText(this,"Verefique conexão!!",Toast.LENGTH_SHORT).show();
-        }
-        return conectado;
-    }
+
 }

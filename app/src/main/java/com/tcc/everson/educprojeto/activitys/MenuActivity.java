@@ -3,6 +3,7 @@ package com.tcc.everson.educprojeto.activitys;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -46,14 +47,20 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!validaCampos()){
 
-                    usuarios = new Usuarios();
-                    usuarios.setEmail(usuarioEntra.getText().toString());
-                    usuarios.setSenha(senhaEntra.getText().toString());
+                if (!validaCampos()) {
+                    if (verificaConexao()) {
+                        return;
 
-                    loginvalida();
 
+                    } else {
+                        usuarios = new Usuarios();
+                        usuarios.setEmail(usuarioEntra.getText().toString());
+                        usuarios.setSenha(senhaEntra.getText().toString());
+
+                        loginvalida();
+
+                    }
 
                 }else{
                     validaCampos();
@@ -117,5 +124,18 @@ public class MenuActivity extends AppCompatActivity {
         boolean resultado = (TextUtils.isEmpty(campo) || campo.trim().isEmpty());//verifica se esta vazio e sem espaços
         return resultado;
 
+    }
+    public  boolean verificaConexao() {
+        boolean conectado;
+        ConnectivityManager conectivtyManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (conectivtyManager.getActiveNetworkInfo() != null
+                && conectivtyManager.getActiveNetworkInfo().isAvailable()
+                && conectivtyManager.getActiveNetworkInfo().isConnected()) {
+            conectado = true;
+        } else {
+            conectado = false;
+            Toast.makeText(this,"Verefique conexão!!",Toast.LENGTH_SHORT).show();
+        }
+        return conectado;
     }
 }

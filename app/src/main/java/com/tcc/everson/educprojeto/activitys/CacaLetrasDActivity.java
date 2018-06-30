@@ -101,7 +101,7 @@ public class CacaLetrasDActivity extends AppCompatActivity {
                 dialogBuilder.setTitle("Parabéns")
                         .setMessage("Parabéns, Retornar para tela inicial?")
                         .setCancelable(false)
-                        .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Sair", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface arg0, int arg1) {
                                 finish();
                             }
